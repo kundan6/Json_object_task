@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>task </title>
+   </head>
+   <body>
+      <h1>Employee Info</h1>
+      <ul id="list">
+     </ul>
+      <script >  	
+         let obj = JSON.parse('{ "name":"John", "age":30,  "gender":"Male", "city":"New York"}');
+
+         let items = Object.keys(obj);	
+
+         items.map(key => {
+         let value = obj[key];	
+
+        /* document.write(`<ul> <li>${key}  ${value} </li></ul>`);*/
+
+        var text= `${key} : ${value}`;
+        var listItem = document.createElement("LI");
+            listItem.textContent = text;
+            list.appendChild(listItem);
+         });
+      </script>
+   </body>
+</html>
